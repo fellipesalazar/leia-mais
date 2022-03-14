@@ -1,0 +1,15 @@
+.wp-block-sallazar-leia-mais {
+    background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+    padding: 2em;
+    color: white;
+    font-size: 20px;
+    box-sizing: border-box;
+    transform: rotate3d(0, 0, 0, 0);
+    transition: all 200ms ease-out;
+    box-shadow: 3px 3px 3px #666;
+    text-align: center;
+}
+
+.wp-block-sallazar-leia-mais:hover {
+    transform: rotate3d(1, 1, 1, -4deg);
+}

@@ -17,14 +17,29 @@
     }
 
     wp_register_script(
-        'leia-mais',
-        plugins_url('bloco-leia-mais.js', __FILE__),
+        'script',
+        plugins_url('script.js', __FILE__),
         array('wp-blocks','wp-element'),
-        filemtime(plugin_dir_path(__FILE__) . 'bloco-leia-mais.js')
+        filemtime(plugin_dir_path(__FILE__) . 'script.js')
     );
 
+    wp_register_style(
+        'editor-style',
+        plugins_url('editor-style.css', __FILE__),
+        array('wp-edit-blocks'),
+        filemtime(plugin_dir_path(__FILE__) . 'editor-style.css')
+    )
+
+    wp_register_style(
+        'front-style',
+        plugins_url('front-style.css', __FILE__),
+        filemtime(plugin_dir_path(__FILE__) . 'front-style.css')
+    )
+
     register_block_type('sallazar/leia-mais', array(
-        'editor_script' => 'leia-mais',
+        'style' => 'front-style',
+        'editor_script' => 'script',
+        'editor_style' => 'editor-style'
     ));
 
  }
